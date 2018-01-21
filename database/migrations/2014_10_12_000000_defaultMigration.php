@@ -30,6 +30,13 @@ class DefaultMigration extends Migration
             $table->string('token');
             $table->timestamps();
         });
+        
+        Schema::create('products', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
+            $table->string('title')->index();
+            $table->text('description'); 
+            $table->timestamps();
+        });
     }
 
     /**
@@ -39,6 +46,7 @@ class DefaultMigration extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('products');
         Schema::dropIfExists('password_resets');
         Schema::dropIfExists('users');
     }

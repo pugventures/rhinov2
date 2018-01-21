@@ -14,7 +14,7 @@
         </a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="javascript:;">Your Profile</a>
-            <a class="dropdown-item" href="">Logout</a>
+            <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
         </div>
     </div>
     <!-- main navigation -->

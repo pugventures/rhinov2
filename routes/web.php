@@ -14,7 +14,10 @@
 Auth::routes();
 
 Route::get('/', 'Auth\LoginController@showLoginForm');
+
 Route::get('/dashboard', 'Dashboard\DashboardController@showDashboard');
+
+Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/users', 'Users\UsersController@showUsers');
 Route::get('/users/create', 'Users\UsersController@createUser');
