@@ -8,7 +8,7 @@ Users
 
 <div class='row m-b-1'>
     <div class='col-sm-3'>
-        <a href='{{ url('users/create') }}'><button type='button' id='createUserBtn' class='btn btn-block btn-success'>Create New User</button></a>
+        <a href='{{ url('users/create') }}'><button type='button' id='createUserBtn' class='btn btn-block btn-success'>Create User</button></a>
     </div>
 </div>
 
@@ -36,7 +36,7 @@ Users
                 <tr class="userRow" data-id="{{ $user->id }}">
                     <td>{{ $user->first_name }}</td>
                     <td>{{ $user->last_name }}</td>
-                    <td>{{ $user->email    }}</td>
+                    <td>{{ $user->email }}</td>
                     <td>{{ $user->role }}</td>
                 </tr>
                 @endforeach

@@ -42,12 +42,12 @@
                     <li>
                         <a href="{{ url('products') }}">
                             <span>All Products</span>
+                            <li><a href="{{ url('products/create') }}"><span>Create Product</span></a></li>
                         </a>
                     </li>
                 </ul>
             </li>
         </ul>
-        
         
         <p class="nav-title">ADMINISTRATION</p>
         <ul class="nav">

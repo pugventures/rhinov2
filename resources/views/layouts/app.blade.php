@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.css') }}"/>
         <link rel="stylesheet" href="{{ asset('vendor/animate.css/animate.css') }}"/>
         <link rel="stylesheet" href="{{ asset('vendor/sweetalert/dist/sweetalert.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/summernote/dist/summernote.css') }}"/>
         <link rel="stylesheet" href="{{ asset('styles/app.css') }}"/>
         <link rel="stylesheet" href="{{ asset('styles/app.skins.css') }}"/>
 
@@ -31,8 +32,7 @@
         <div class="app">
 
             @include('layouts.nav')
-            @include('layouts.alerts')
-            
+
             <div class="main-panel">
                 <nav class="header navbar">
                     <div class="header-inner">
@@ -49,6 +49,8 @@
                 </nav>
 
                 <div class="main-content">
+                    @include('layouts.alerts')
+
                     <div class="content-view">
                         @yield('content')
                     </div>
@@ -88,12 +90,10 @@
         <script src="{{ asset('scripts/helpers/noty-defaults.js') }}"></script>
         <script src="{{ asset('scripts/constants.js') }}"></script>
         <script src="{{ asset('scripts/main.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
 
         @stack('scripts')
 
         <script src="{{ asset('vendor/jquery-validation/dist/jquery.validate.min.js') }}"></script>
-        <script type="text/javascript">
-            $('#validate').validate();
-        </script>
     </body>
 </html>

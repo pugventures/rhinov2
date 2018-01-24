@@ -17,7 +17,16 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::get('/dashboard', 'Dashboard\DashboardController@showDashboard');
 
+Route::get('/ebay/categoryAspects', 'Ebay\EbayTaxonomyAPI@getCategoryItemAspects');
+Route::get('/ebay/categorySuggestions', 'Ebay\EbayTaxonomyAPI@getCategorySuggestions');
+
 Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/products', 'Products\ProductsController@showProducts');
+Route::get('/products/create', 'Products\ProductsController@createProduct');
+Route::post('/products/create', 'Products\ProductsController@submitProduct');
+Route::get('/products/{id}', 'Products\ProductsController@editProduct');
+Route::post('/products/{id}', 'Products\ProductsController@updateProduct');
 
 Route::get('/users', 'Users\UsersController@showUsers');
 Route::get('/users/create', 'Users\UsersController@createUser');
