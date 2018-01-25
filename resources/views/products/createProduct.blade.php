@@ -129,13 +129,39 @@ Create Product
                                     Listing Price
                                 </label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" v-bind:value="listingPrice" disabled>
+                                    <input type="text" class="form-control" v-bind:value="listing_price" disabled>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset class="form-group">
+                                <label>
+                                    Ebay Fee
+                                </label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" v-bind:value="ebay_cost" disabled>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset class="form-group">
+                                <label>
+                                    Paypal Fee
+                                </label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" v-bind:value="paypal_cost" disabled>
                                 </div>
                             </fieldset>
                         </div>
-
-
-
+                        
+                        <div class="col-sm-4">
+                            <fieldset class="form-group">
+                                <label>
+                                    Estimated Profit
+                                </label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" v-bind:value="estimated_profit" disabled>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -205,11 +231,29 @@ var productCreateComponent = new Vue({
         aspects: "",
         cost: parseFloat(0.00).toFixed(2),
         dropship_fee: parseFloat(0.00).toFixed(2),
-        shipping: parseFloat(0.00).toFixed(2)
+        shipping: parseFloat(0.00).toFixed(2),
+        listing_price_saved: parseFloat(0.00).toFixed(2),
+        ebay_fee: parseFloat(0.00).toFixed(2),
+        paypal_fee: parseFloat(0.00).toFixed(2),
+        estimated_profit_saved: parseFloat(0.00).toFixed(2)
     },
     computed: {
-        listingPrice: function () {
-            return (parseFloat(this.cost) + parseFloat(this.dropship_fee) + parseFloat(this.shipping)).toFixed(2);
+        listing_price: function () {
+            this.listing_price_saved = (((parseFloat(this.cost) + parseFloat(this.dropship_fee) + parseFloat(this.shipping)) * 0.4) + parseFloat(this.cost)).toFixed(2);
+            return this.listing_price_saved;
+        },
+        ebay_cost: function() {
+            this.ebay_fee = (this.listing_price_saved * 0.10).toFixed(2);
+            return this.ebay_fee;
+        },
+        paypal_cost: function() {
+            this.paypal_fee = ((this.listing_price_saved * 0.029) + 0.30).toFixed(2);
+            return this.paypal_fee;
+        },
+        estimated_profit: function() {
+            this.estimated_profit_saved = (this.listing_price_saved - this.cost - this.ebay_fee - this.paypal_fee).toFixed(2);
+            if(this.estimated_profit_saved < 0) { (this.estimated_profit_saved = parseFloat(0.00).toFixed(2)) }
+            return this.estimated_profit_saved;
         }
     },
     watch: {
