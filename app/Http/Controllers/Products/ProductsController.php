@@ -20,7 +20,11 @@ class ProductsController extends Controller {
     }
 
     public function createProduct(Request $request) {
-        return view('products/createProduct', ['user' => Auth::user(), 'variation_attributes' => VariationAttribute::get()]);
+        $data = [
+            'user' => Auth::user(),
+            'variation_attributes' => VariationAttribute::with('options')->get()
+        ];
+        return view('products/createProduct', $data);
     }
 
     public function editProduct($id) {
@@ -54,7 +58,7 @@ class ProductsController extends Controller {
             'title' => 'required|string',
             'description' => 'required',
         ]);
-        
+
         $product = Product::where('id', $id)->first();
 
         $product->title = $request->get('title');

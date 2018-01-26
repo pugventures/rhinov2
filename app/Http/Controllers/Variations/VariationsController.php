@@ -65,6 +65,7 @@ class VariationsController extends Controller {
 
     public function showOptions() {
         $options = VariationOption::with('attribute')->select('id', 'variation_attribute_id', 'title', 'swatch')->get();
+        
         return view('variations/options', ['user' => Auth::user(), 'options' => $options]);
     }
 

@@ -60,6 +60,7 @@ class DefaultMigration extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('variation_options');
         Schema::dropIfExists('variation_attributes');
         Schema::dropIfExists('products');
         Schema::dropIfExists('password_resets');

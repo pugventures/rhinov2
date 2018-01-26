@@ -12,12 +12,12 @@ class VariationAttributesTableSeeder extends Seeder {
      */
     public function run() {
         DB::table('variation_attributes')->insert([
-            'title' => 'size',
+            'title' => 'color',
             'created_at' => date('Y-m-d H:i:s', time()),
             'updated_at' => date('Y-m-d H:i:s', time())
         ]);
         DB::table('variation_attributes')->insert([
-            'title' => 'color',
+            'title' => 'size',
             'created_at' => date('Y-m-d H:i:s', time()),
             'updated_at' => date('Y-m-d H:i:s', time())
         ]);

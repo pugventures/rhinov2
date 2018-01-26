@@ -91,21 +91,21 @@ class VariationOptionsTableSeeder extends Seeder {
         ]);
         DB::table('variation_options')->insert([
             'variation_attribute_id' => 2,
-            'title' => 'extra-large',
+            'title' => 'x large',
             'swatch' => 'XL',
             'created_at' => date('Y-m-d H:i:s', time()),
             'updated_at' => date('Y-m-d H:i:s', time())
         ]);
         DB::table('variation_options')->insert([
             'variation_attribute_id' => 2,
-            'title' => 'extra-extra-large',
+            'title' => '2x large',
             'swatch' => '2XL',
             'created_at' => date('Y-m-d H:i:s', time()),
             'updated_at' => date('Y-m-d H:i:s', time())
         ]);
         DB::table('variation_options')->insert([
             'variation_attribute_id' => 2,
-            'title' => 'extra-extra-extra-large',
+            'title' => '3x large',
             'swatch' => '3XL',
             'created_at' => date('Y-m-d H:i:s', time()),
             'updated_at' => date('Y-m-d H:i:s', time())
