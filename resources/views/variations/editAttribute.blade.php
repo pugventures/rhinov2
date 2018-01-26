@@ -25,11 +25,11 @@ Edit Attribute
 
             </fieldset>
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary" style="float:right;">
                 Edit Variation Attribute
             </button>
 
-            <button id="deleteBtn" type="button" class="btn btn-danger" style="float:right;">
+            <button id="deleteBtn" type="button" class="btn btn-danger">
                 DELETE
             </button>
 

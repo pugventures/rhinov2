@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VariationAttribute extends Model {
+class VariationOption extends Model {
 
     /**
      * The attributes that are mass assignable.
@@ -12,14 +12,14 @@ class VariationAttribute extends Model {
      * @var array
      */
     protected $fillable = [
-        'title'
+        'variation_attribute_id', 'title'
     ];
     
     /**
      * Get this users role
      */
-    public function options()
+    public function attribute()
     {
-        return $this->hasMany('App\Models\VariationOption');
+        return $this->belongsTo('App\Models\VariationAttribute', 'variation_attribute_id', 'id');
     }
 }

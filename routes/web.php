@@ -40,3 +40,9 @@ Route::post('/variations/attributes/create', 'Variations\VariationsController@su
 Route::get('/variations/attributes/{id}', 'Variations\VariationsController@editAttribute');
 Route::post('/variations/attributes/{id}', 'Variations\VariationsController@updateAttribute');
 Route::get('/variations/attributes/delete/{id}', 'Variations\VariationsController@deleteAttribute');
+Route::get('/variations/options', 'Variations\VariationsController@showOptions');
+Route::get('/variations/options/create', 'Variations\VariationsController@createOption');
+Route::post('/variations/options/create', 'Variations\VariationsController@submitOption');
+Route::get('/variations/options/{id}', 'Variations\VariationsController@editOption');
+Route::post('/variations/options/{id}', 'Variations\VariationsController@updateOption');
+Route::get('/variations/options/delete/{id}', 'Variations\VariationsController@deleteOption');

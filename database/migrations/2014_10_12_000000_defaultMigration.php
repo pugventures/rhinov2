@@ -43,6 +43,14 @@ class DefaultMigration extends Migration
             $table->string('title')->index();
             $table->timestamps();
         });
+        
+        Schema::create('variation_options', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
+            $table->integer('variation_attribute_id')->unsigned()->index();
+            $table->string('title')->index();
+            $table->string('swatch')->nullable()->default(NULL);
+            $table->timestamps();
+        });
     }
 
     /**
