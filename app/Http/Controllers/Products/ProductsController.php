@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\VariationAttribute;
 
 class ProductsController extends Controller {
 
@@ -19,7 +20,7 @@ class ProductsController extends Controller {
     }
 
     public function createProduct(Request $request) {
-        return view('products/createProduct', ['user' => Auth::user()]);
+        return view('products/createProduct', ['user' => Auth::user(), 'variation_attributes' => VariationAttribute::get()]);
     }
 
     public function editProduct($id) {

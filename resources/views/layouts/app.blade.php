@@ -17,6 +17,14 @@
 
         <title>RhinoIO.v1 - Pug Ventures, LLC</title>
 
+        <link rel="stylesheet" href="{{ asset('vendor/jquery.tagsinput/src/jquery.tagsinput.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/jquery-labelauty/source/jquery-labelauty.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/multiselect/css/multi-select.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/ui-select/dist/select.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/select2/select2.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/selectize/dist/css/selectize.css') }}">
+
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/dist/css/bootstrap.css') }}"/>
         <link rel="stylesheet" href="{{ asset('vendor/pace/themes/blue/pace-theme-minimal.css') }}"/>
         <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/font-awesome.css') }}"/>
@@ -25,8 +33,6 @@
         <link rel="stylesheet" href="{{ asset('vendor/summernote/dist/summernote.css') }}"/>
         <link rel="stylesheet" href="{{ asset('styles/app.css') }}"/>
         <link rel="stylesheet" href="{{ asset('styles/app.skins.css') }}"/>
-
-        @stack('styles')
     </head>
     <body>
         <div class="app">
@@ -85,12 +91,21 @@
         <script src="{{ asset('vendor/tether/dist/js/tether.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.js') }}"></script>
         <script src="{{ asset('vendor/fastclick/lib/fastclick.js') }}"></script>
-        <script src="{{ asset('vendor/sweetalert/dist/sweetalert.min.js') }}"></script>
-        <script src="{{ asset('vendor/noty/js/noty/packaged/jquery.noty.packaged.min.js') }}"></script>
-        <script src="{{ asset('scripts/helpers/noty-defaults.js') }}"></script>
         <script src="{{ asset('scripts/constants.js') }}"></script>
         <script src="{{ asset('scripts/main.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+
+        <script src="{{ asset('vendor/summernote/dist/summernote.js') }}"></script>
+        <script src="{{ asset('vendor/jquery.tagsinput/src/jquery.tagsinput.js') }}"></script>
+        <script src="{{ asset('vendor/moment/min/moment.min.js') }}"></script>
+        <script src="{{ asset('vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js') }}"></script>
+        <script src="{{ asset('vendor/select2/select2.js') }}"></script>
+        <script src="{{ asset('vendor/selectize/dist/js/standalone/selectize.min.js') }}"></script>
+        <script src="{{ asset('vendor/jquery-labelauty/source/jquery-labelauty.js') }}"></script>
+        <script src="{{ asset('vendor/multiselect/js/jquery.multi-select.js') }}"></script>
+        <script src="{{ asset('vendor/sweetalert/dist/sweetalert.min.js') }}"></script>
+        <script src="{{ asset('vendor/noty/js/noty/packaged/jquery.noty.packaged.min.js') }}"></script>
+        <script src="{{ asset('scripts/helpers/noty-defaults.js') }}"></script>
 
         @stack('scripts')
 

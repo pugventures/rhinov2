@@ -37,6 +37,12 @@ class DefaultMigration extends Migration
             $table->text('description'); 
             $table->timestamps();
         });
+        
+        Schema::create('variation_attributes', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
+            $table->string('title')->index();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -46,6 +52,7 @@ class DefaultMigration extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('variation_attributes');
         Schema::dropIfExists('products');
         Schema::dropIfExists('password_resets');
         Schema::dropIfExists('users');

@@ -65,6 +65,20 @@
                     <li><a href="{{ url('users/create') }}"><span>Create User</span></a></li>
                 </ul>
             </li>
+            
+            <li>
+                <a href="javascript:;">
+                    <span class="menu-caret">
+                        <i class="material-icons">arrow_drop_down</i>
+                    </span>
+                    <i class="material-icons">view_module</i>
+                    <span>Variations</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="{{ url('variations/attributes') }}"><span>Variation Attributes</span></a></li>
+                    <li><a href="{{ url('variations/options') }}"><span>Variation Options</span></a></li>
+                </ul>
+            </li>
 
             <li>
                 <a href="#" target="_blank">
