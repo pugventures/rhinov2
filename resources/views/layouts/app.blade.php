@@ -95,6 +95,8 @@
         <script src="{{ asset('scripts/main.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
 
+        <script src="{{ asset('vendor/datatables/media/js/jquery.dataTables.js') }}"></script>
+        <script src="{{ asset('vendor/datatables/media/js/dataTables.bootstrap4.js') }}"></script>
         <script src="{{ asset('vendor/summernote/dist/summernote.js') }}"></script>
         <script src="{{ asset('vendor/jquery.tagsinput/src/jquery.tagsinput.js') }}"></script>
         <script src="{{ asset('vendor/moment/min/moment.min.js') }}"></script>

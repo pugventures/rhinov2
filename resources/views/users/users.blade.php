@@ -33,7 +33,7 @@ Users
             </thead>
             <tbody>
                 @foreach($users as $user)
-                <tr class="userRow" data-id="{{ $user->id }}">
+                <tr class="dataTableRow" data-id="{{ $user->id }}">
                     <td>{{ $user->first_name }}</td>
                     <td>{{ $user->last_name }}</td>
                     <td>{{ $user->email }}</td>
@@ -46,26 +46,12 @@ Users
 </div>
 @endsection
 
-
-@push('styles')
-
-<style>
-    .userRow {
-        cursor:pointer;
-    }
-</style>
-
-@endpush
-
 @push('scripts')
-
-<script src="vendor/datatables/media/js/jquery.dataTables.js"></script>
-<script src="vendor/datatables/media/js/dataTables.bootstrap4.js"></script>
 
 <script type="text/javascript">
 $('#usersTable').DataTable({searching: false, paging: false});
 
-$('.userRow').bind('click', function () {
+$('.dataTableRow').bind('click', function () {
     window.location.replace('users/' + $(this).data('id'));
 });
 </script>

@@ -33,3 +33,10 @@ Route::get('/users/create', 'Users\UsersController@createUser');
 Route::post('/users/create', 'Users\UsersController@submitUser');
 Route::get('/users/{id}', 'Users\UsersController@editUser');
 Route::post('/users/{id}', 'Users\UsersController@updateUser');
+
+Route::get('/variations/attributes', 'Variations\VariationsController@showAttributes');
+Route::get('/variations/attributes/create', 'Variations\VariationsController@createAttribute');
+Route::post('/variations/attributes/create', 'Variations\VariationsController@submitAttribute');
+Route::get('/variations/attributes/{id}', 'Variations\VariationsController@editAttribute');
+Route::post('/variations/attributes/{id}', 'Variations\VariationsController@updateAttribute');
+Route::get('/variations/attributes/delete/{id}', 'Variations\VariationsController@deleteAttribute');
