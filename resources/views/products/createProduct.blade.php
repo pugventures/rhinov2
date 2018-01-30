@@ -55,7 +55,24 @@ Create Product
             }
         }
     });
-
+    var variationComponent = new Vue({
+        el: '#variationsComponent',
+        data: {
+            variations: [],
+            color: null,
+            size: null,
+            price: null
+        },
+        methods: {
+            addVariation: function() {
+                this.variations.push({index: this.variations.length, color: this.color, size: this.size, price: this.price});
+            },
+            deleteVariation: function(index) {
+                this.variations.splice(index, 1)
+            }
+        }
+    });
+    
 </script>
 
 @endpush
